@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Rick and Morty Wiki App
 
 Demo at:
 
