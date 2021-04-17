@@ -1,6 +1,6 @@
 # Rick and Morty Wiki App
 
-Demo at:
+Demo at: https://katiaipduarte.github.io/rick-and-morty-wiki/
 
 The app was created with create-react-app, redux, typescript and styled-components for styling. See the [full create-react-app guide](https://github.com/facebook/create-react-app), [redux](https://redux.js.org/) and [redux toolkit](https://redux-toolkit.js.org/). Thank you for using my boilerplate.
 
