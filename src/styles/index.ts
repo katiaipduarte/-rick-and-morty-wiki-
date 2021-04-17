@@ -7,25 +7,22 @@ export const GlobalStyle = createGlobalStyle`
     ${Typography}
 
     body {
-        min-width: 360px;
-        min-height: 660px;
+        min-width: 360rem;
+        min-height: 660rem;
         display: flex;
         flex-direction: column;
 
         #root {
-            min-width: 360px;
-            min-height: 641px;
+            min-width: 360rem;
+            min-height: 641rem;
         }
 
         main {
-            height: calc(100vh - 30px);
-            min-height: 641px;
+            height: calc(100vh - 30rem);
+            min-height: 641rem;
             padding: 0;
             flex: 1;
             padding: 25rem;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
 
             .page-loader {
                 display: flex;
@@ -62,10 +59,6 @@ export const GlobalStyle = createGlobalStyle`
 
             h3 {
                 font-size: 20rem;
-            }
-
-            svg {
-                color: black;
             }
         }
     }

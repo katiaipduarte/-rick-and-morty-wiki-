@@ -1,10 +1,12 @@
 import React from 'react';
+import Search from '../components/Search/Search';
 
 const Home = () => {
   return (
-    <main className="centered-container">
-      <p>Home Page Example</p>
-    </main>
+    <>
+      <Search />
+      <main className="centered-container"></main>
+    </>
   );
 };
 
