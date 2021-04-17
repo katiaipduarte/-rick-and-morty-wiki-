@@ -26,7 +26,7 @@ The app was created with create-react-app, redux, typescript and styled-componen
 
 ## Installation
 
-To use this app, first clone from GitHub via 'git clone https://github.com/katiaipduarte/cra-boilerplate' at your terminal, `cd` to the new directory, then run `npm install`. Before running this project, you will need to create a `.env.local` file, with the same env as the ones in the `.env.example`. At last, run `npm run start` to launch your http server.
+To use this app, first clone from GitHub via `git clone https://github.com/katiaipduarte/rick-and-morty-wiki` at your terminal, `cd` to the new directory, then run `npm install`. Before running this project, you will need to create a `.env.local` file, with the same env as the ones in the `.env.example`. At last, run `npm run start` to launch your http server.
 
 ### API Keys
 
@@ -36,7 +36,7 @@ To use this app, first clone from GitHub via 'git clone https://github.com/katia
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/katiaipduarte/cra-boilerplate. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/katiaipduarte/rick-and-morty-wiki. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 ## License
 
