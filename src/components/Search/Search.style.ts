@@ -34,8 +34,9 @@ export const SearchContainer = styled.header`
       height: calc(100% - 16rem);
 
       &.is-loading {
-        width: calc(100% - 80rem);
+        width: calc(100% - 76rem);
         background: url(${loading}) no-repeat right center;
+        margin-right: 14rem;
       }
     }
     #search-term-btn,
