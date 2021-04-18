@@ -8,11 +8,11 @@ type CharactersReducer = {
 };
 
 const getNextPage = (nextUrl: string | null): number => {
-  if (nextUrl === null) {
+  if (nextUrl === null || nextUrl === '') {
     return 1;
   }
   const split = nextUrl.split('page=');
-  if (split.length === 0) {
+  if (split.length === 1) {
     return 1;
   }
 
