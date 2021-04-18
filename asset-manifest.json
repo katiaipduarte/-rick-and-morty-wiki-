@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/rick-and-morty-wiki/static/css/main.02d93f0f.chunk.css",
-    "main.js": "/rick-and-morty-wiki/static/js/main.69a0444d.chunk.js",
-    "main.js.map": "/rick-and-morty-wiki/static/js/main.69a0444d.chunk.js.map",
+    "main.js": "/rick-and-morty-wiki/static/js/main.0518d8ea.chunk.js",
+    "main.js.map": "/rick-and-morty-wiki/static/js/main.0518d8ea.chunk.js.map",
     "runtime-main.js": "/rick-and-morty-wiki/static/js/runtime-main.31f5fcda.js",
     "runtime-main.js.map": "/rick-and-morty-wiki/static/js/runtime-main.31f5fcda.js.map",
-    "static/js/2.18e9be2d.chunk.js": "/rick-and-morty-wiki/static/js/2.18e9be2d.chunk.js",
-    "static/js/2.18e9be2d.chunk.js.map": "/rick-and-morty-wiki/static/js/2.18e9be2d.chunk.js.map",
+    "static/js/2.8c4814e1.chunk.js": "/rick-and-morty-wiki/static/js/2.8c4814e1.chunk.js",
+    "static/js/2.8c4814e1.chunk.js.map": "/rick-and-morty-wiki/static/js/2.8c4814e1.chunk.js.map",
     "index.html": "/rick-and-morty-wiki/index.html",
     "static/css/main.02d93f0f.chunk.css.map": "/rick-and-morty-wiki/static/css/main.02d93f0f.chunk.css.map",
-    "static/js/2.18e9be2d.chunk.js.LICENSE.txt": "/rick-and-morty-wiki/static/js/2.18e9be2d.chunk.js.LICENSE.txt",
+    "static/js/2.8c4814e1.chunk.js.LICENSE.txt": "/rick-and-morty-wiki/static/js/2.8c4814e1.chunk.js.LICENSE.txt",
     "static/media/background.fe455518.webp": "/rick-and-morty-wiki/static/media/background.fe455518.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.31f5fcda.js",
-    "static/js/2.18e9be2d.chunk.js",
+    "static/js/2.8c4814e1.chunk.js",
     "static/css/main.02d93f0f.chunk.css",
-    "static/js/main.69a0444d.chunk.js"
+    "static/js/main.0518d8ea.chunk.js"
   ]
 }
