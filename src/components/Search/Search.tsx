@@ -27,8 +27,8 @@ const Search = (): JSX.Element => {
   };
 
   const handleClearSearch = (): void => {
-    // dispatch(clearSearch());
     setQuery('');
+    debounce('');
     setShowClearButton(false);
   };
 
@@ -52,7 +52,13 @@ const Search = (): JSX.Element => {
           <FontAwesomeIcon icon={faSearch} />
         </button>
 
-        <input type="text" value={query} maxLength={50} onChange={(event) => handleChange(event)} />
+        <input
+          type="text"
+          value={query}
+          maxLength={50}
+          onChange={(event) => handleChange(event)}
+          placeholder="Search by character name"
+        />
         <button
           id="clear-search-term-btn"
           aria-label="Click to clear search"

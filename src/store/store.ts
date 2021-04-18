@@ -1,10 +1,15 @@
 import { combineReducers, applyMiddleware, createStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
+import { CharacterResponse } from '../interfaces/character-response';
+import charactersReducer from './characters/reducer';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface GlobalState {}
+export interface GlobalState {
+  charactersState: CharacterResponse;
+}
 
-const combinedReducer = combineReducers<GlobalState>({});
+const combinedReducer = combineReducers<GlobalState>({
+  charactersState: charactersReducer,
+});
 
 const bindMiddleware = (middleware: any) => {
   if (process.env.NODE_ENV !== 'production') {

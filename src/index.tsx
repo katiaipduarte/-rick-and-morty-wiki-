@@ -8,11 +8,13 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import App from './App';
 import registerIcons from './registerFaIcons';
+import { GlobalStyle } from './styles';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
+      <GlobalStyle />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
