@@ -23,24 +23,38 @@ export const ModalContainer = styled.div`
       justify-content: flex-end;
     }
     .profile {
-      align-items: center;
-      display: flex;
-      justify-content: center;
       img {
+        display: block;
+        margin: 0 auto 20rem;
         border-radius: 50%;
-        flex: 1 1;
-        margin-right: 15rem;
+        width: 80%;
       }
 
       .profile-details {
-        flex: 2 1;
-
         h1 {
           font-weight: bold;
           color: green;
           font-size: 26rem;
           margin-bottom: 25rem;
           text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      .profile {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        img {
+          flex: 1 1;
+          margin-right: 15rem;
+          width: 50%;
+        }
+        .profile-details {
+          flex: 2 1;
         }
       }
     }
