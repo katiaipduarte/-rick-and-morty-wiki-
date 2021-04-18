@@ -57,7 +57,7 @@ const Search = (): JSX.Element => {
           value={query}
           maxLength={50}
           onChange={(event) => handleChange(event)}
-          placeholder="Search by character name"
+          placeholder="Search by character"
           className={loading ? 'is-loading' : ''}
         />
         <button

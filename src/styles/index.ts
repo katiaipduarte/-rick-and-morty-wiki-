@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
             display: flex;
             margin: 0 auto;
             max-width: 1080rem;
-            padding: 2rem 1rem;
+            padding: 0rem 60rem;
 
             h1, h2, h3, h4, h5, h6, p {
                 color: back;

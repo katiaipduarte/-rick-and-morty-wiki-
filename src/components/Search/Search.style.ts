@@ -20,7 +20,7 @@ export const SearchContainer = styled.header`
   form {
     background: white;
     border-radius: 4rem;
-    width: 740rem;
+    width: calc(100vw - 80rem);
     height: 64rem;
     box-shadow: 0 4rem 48rem 0 rgb(0 0 0 / 20%);
 
@@ -54,6 +54,12 @@ export const SearchContainer = styled.header`
       &:focus {
         outline: none;
       }
+    }
+  }
+
+  @media (min-width: 900px) {
+    form {
+      width: 740rem;
     }
   }
 `;

@@ -17,6 +17,21 @@ const CharacterList = (): JSX.Element => {
     setPagination(store.info);
   }, [store]);
 
+  const getStatusColor = (status: string): string => {
+    let color = '';
+
+    switch (status) {
+      case 'Alive':
+        color = 'green';
+        break;
+      case 'Dead':
+        color = 'red';
+        break;
+    }
+
+    return color;
+  };
+
   return (
     <CharacterListContainer>
       {list.map((item: Character, i: number) => {
@@ -25,8 +40,17 @@ const CharacterList = (): JSX.Element => {
             <img src={item.image} alt={item.name} />
 
             <div>
-              <p>{item.species}</p>
+              <p className="species">{item.species}</p>
               <h1>{item.name}</h1>
+              <p className="description">
+                <span style={{ color: getStatusColor(item.status) }} className="status">
+                  {item.status}
+                </span>
+                <br />
+                <span>{item.location.name}</span>
+                <br />
+                <span>Appears on {item.episode.length} episodes</span>
+              </p>
             </div>
           </article>
         );
