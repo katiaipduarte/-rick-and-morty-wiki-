@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import background from '../../assets/background.webp';
+import loading from '../../assets/loading.gif';
 
 export const SearchContainer = styled.header`
   align-items: center;
@@ -31,6 +32,11 @@ export const SearchContainer = styled.header`
       font-size: 16rem;
       width: calc(100% - 120rem);
       height: calc(100% - 16rem);
+
+      &.is-loading {
+        width: calc(100% - 80rem);
+        background: url(${loading}) no-repeat right center;
+      }
     }
     #search-term-btn,
     #clear-search-term-btn {

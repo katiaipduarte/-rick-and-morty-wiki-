@@ -16,7 +16,7 @@ const Search = (): JSX.Element => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
 
-    setShowClearButton(value !== '');
+    setLoading(true);
     setQuery(value);
     debounce(value);
   };
@@ -34,8 +34,8 @@ const Search = (): JSX.Element => {
 
   const debounce = useCallback(
     lodash.debounce((searchTerm) => {
-      setLoading(true);
       getCharacters(searchTerm);
+      setShowClearButton(searchTerm !== '');
       setLoading(false);
     }, 500),
     [],
@@ -58,6 +58,7 @@ const Search = (): JSX.Element => {
           maxLength={50}
           onChange={(event) => handleChange(event)}
           placeholder="Search by character name"
+          className={loading ? 'is-loading' : ''}
         />
         <button
           id="clear-search-term-btn"
