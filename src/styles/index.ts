@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
             margin: 0 auto;
             max-width: 1080rem;
             padding: 0rem 60rem;
+            flex-direction: column;
 
             h1, h2, h3, h4, h5, h6, p {
                 color: back;

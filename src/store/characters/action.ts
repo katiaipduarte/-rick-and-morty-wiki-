@@ -9,3 +9,5 @@ export const modalStatus = (status: boolean): PayloadAction<string, boolean> =>
   action(CharactersType.MODAL_STATUS, status);
 
 export const selectCharacter = (id: number): PayloadAction<string, number> => action(CharactersType.SELECTED, id);
+
+export const searchQuery = (query: string): PayloadAction<string, string> => action(CharactersType.SEARCH_QUERY, query);

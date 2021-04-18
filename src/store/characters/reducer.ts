@@ -7,15 +7,14 @@ type CharactersReducer = {
 };
 
 const getNextPage = (nextUrl: string | null): number => {
-  if (nextUrl === null || nextUrl === '') {
-    return 1;
-  }
-  const split = nextUrl.split('page=');
-  if (split.length === 1) {
-    return 1;
+  const urlParams = new URLSearchParams(nextUrl?.split('?')[1] ?? '');
+  const page = urlParams.get('page');
+
+  if (page) {
+    return +page;
   }
 
-  return +split[1];
+  return 1;
 };
 
 const charactersReducer: Reducer<CharacterStore> = (
@@ -38,6 +37,8 @@ const charactersReducer: Reducer<CharacterStore> = (
       return { ...state, modalStatus: action.payload };
     case CharactersType.SELECTED:
       return { ...state, selected: action.payload };
+    case CharactersType.SEARCH_QUERY:
+      return { ...state, searchTerm: action.payload };
     default:
       return { ...state };
   }

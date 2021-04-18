@@ -11,7 +11,7 @@ export const ModalContainer = styled.div`
   .content {
     background-color: white;
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 19%;
     width: 60%;
     padding: 20rem;
@@ -44,6 +44,7 @@ export const ModalContainer = styled.div`
 
   @media (min-width: 768px) {
     .content {
+      top: 20%;
       .profile {
         align-items: center;
         display: flex;

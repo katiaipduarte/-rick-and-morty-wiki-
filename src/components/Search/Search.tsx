@@ -5,8 +5,11 @@ import lodash from 'lodash';
 
 import { SearchContainer } from './Search.style';
 import ApiProvider from '../../lib/api-provider';
+import { useDispatch } from 'react-redux';
+import { searchQuery } from '../../store/characters/action';
 
 const Search = (): JSX.Element => {
+  const dispatch = useDispatch();
   const [query, setQuery] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [showClearButton, setShowClearButton] = useState<boolean>(false);
@@ -18,6 +21,7 @@ const Search = (): JSX.Element => {
 
     setLoading(true);
     setQuery(value);
+    dispatch(searchQuery(value));
     debounce(value);
   };
 
@@ -28,6 +32,8 @@ const Search = (): JSX.Element => {
 
   const handleClearSearch = (): void => {
     setQuery('');
+    dispatch(searchQuery(''));
+
     debounce('');
     setShowClearButton(false);
   };

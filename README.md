@@ -1,5 +1,7 @@
 # Rick and Morty Wiki App
 
+Webapp to search for information about the characters from Rick and Morty TV Show.
+
 Demo at: https://katiaipduarte.github.io/rick-and-morty-wiki/
 
 The app was created with create-react-app, redux, typescript and styled-components for styling. See the [full create-react-app guide](https://github.com/facebook/create-react-app), [redux](https://redux.js.org/) and [redux toolkit](https://redux-toolkit.js.org/). Thank you for using my boilerplate.
@@ -30,9 +32,16 @@ To use this app, first clone from GitHub via `git clone https://github.com/katia
 
 ### API Keys
 
+The API used is https://rickandmortyapi.com/api. Since it is free we just need to add the endpoint and use it.
+
 ## Future Work
 
-[ ] Future work example message <br>
+[ ] Add filters <br>
+[ ] Update the pagination used to have numbers, instead of just arrows <br>
+[ ] Add more unit tests <br>
+[ ] Start updating the url with the current search term, page and filter <br>
+[ ] Add loader animation to image <br>
+[ ] Start using GraphQL instead of REST <br>
 
 ## Contributing
 

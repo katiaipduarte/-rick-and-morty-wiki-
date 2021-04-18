@@ -4,12 +4,14 @@ export const CharactersType = {
   UPDATE: '@@CHARACTERS/UPDATE_DATA',
   MODAL_STATUS: '@@CHARACTERS/MODAL_STATUS',
   SELECTED: '@@CHARACTERS/SELECTED',
+  SEARCH_QUERY: '@@CHARACTERS/SEARCH_QUERY',
 };
 
 export interface CharacterStore {
   response: CharacterResponse;
   modalStatus: boolean;
   selected: number;
+  searchTerm: string;
 }
 
 export const INITIAL_STATE: CharacterStore = {
@@ -25,4 +27,5 @@ export const INITIAL_STATE: CharacterStore = {
   },
   modalStatus: false,
   selected: 0,
+  searchTerm: '',
 };
