@@ -22,4 +22,43 @@ describe('Test Suite for Characters Store Actions', () => {
 
     expect(actions.updateData(mock)).toEqual(expectAction);
   });
+
+  it('should create an action to update modal status', () => {
+    const mock = true;
+
+    const expectAction = {
+      type: CharactersType.MODAL_STATUS,
+      error: undefined,
+      meta: undefined,
+      payload: mock,
+    };
+
+    expect(actions.modalStatus(mock)).toEqual(expectAction);
+  });
+
+  it('should create an action to update selected character', () => {
+    const mock = 1;
+
+    const expectAction = {
+      type: CharactersType.SELECTED,
+      error: undefined,
+      meta: undefined,
+      payload: mock,
+    };
+
+    expect(actions.selectCharacter(mock)).toEqual(expectAction);
+  });
+
+  it('should create an action to update search query', () => {
+    const mock = 'test';
+
+    const expectAction = {
+      type: CharactersType.SEARCH_QUERY,
+      error: undefined,
+      meta: undefined,
+      payload: mock,
+    };
+
+    expect(actions.searchQuery(mock)).toEqual(expectAction);
+  });
 });

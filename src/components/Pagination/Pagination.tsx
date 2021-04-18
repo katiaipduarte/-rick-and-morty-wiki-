@@ -20,7 +20,7 @@ const Pagination = (props: Props): JSX.Element => {
   const getNewPage = (page: number): void => {
     getCharacters(searchTerm, page);
   };
-  console.log(pagination);
+
   return (
     <PaginationContainer>
       <ul>

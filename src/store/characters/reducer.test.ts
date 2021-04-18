@@ -74,4 +74,43 @@ describe('Test Suite for Characters Store Reducer', () => {
     expect(charactersReducer(INITIAL_STATE, updateAction).response.results.length).toEqual(0);
     expect(charactersReducer(INITIAL_STATE, updateAction).response.info.nextPage).toEqual(3);
   });
+
+  it('should update modal status to open', () => {
+    const mock = true;
+
+    const updateAction = {
+      type: CharactersType.MODAL_STATUS,
+      error: undefined,
+      meta: undefined,
+      payload: mock,
+    };
+
+    expect(charactersReducer(INITIAL_STATE, updateAction).modalStatus).toBeTruthy();
+  });
+
+  it('should update selected character to show in modal', () => {
+    const mock = 1;
+
+    const updateAction = {
+      type: CharactersType.SELECTED,
+      error: undefined,
+      meta: undefined,
+      payload: mock,
+    };
+
+    expect(charactersReducer(INITIAL_STATE, updateAction).selected).toEqual(1);
+  });
+
+  it('should update current search query in use', () => {
+    const mock = 'test';
+
+    const updateAction = {
+      type: CharactersType.SEARCH_QUERY,
+      error: undefined,
+      meta: undefined,
+      payload: mock,
+    };
+
+    expect(charactersReducer(INITIAL_STATE, updateAction).searchTerm).toEqual(mock);
+  });
 });
