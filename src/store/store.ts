@@ -1,10 +1,10 @@
 import { combineReducers, applyMiddleware, createStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import { CharacterResponse } from '../interfaces/character-response';
 import charactersReducer from './characters/reducer';
+import { CharacterStore } from './characters/type';
 
 export interface GlobalState {
-  charactersState: CharacterResponse;
+  charactersState: CharacterStore;
 }
 
 const combinedReducer = combineReducers<GlobalState>({

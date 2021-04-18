@@ -25,8 +25,8 @@ describe('Test Suite for Characters Store Reducer', () => {
       payload: mock,
     };
 
-    expect(charactersReducer(INITIAL_STATE, updateAction).results.length).toEqual(0);
-    expect(charactersReducer(INITIAL_STATE, updateAction).info.nextPage).toEqual(1);
+    expect(charactersReducer(INITIAL_STATE, updateAction).response.results.length).toEqual(0);
+    expect(charactersReducer(INITIAL_STATE, updateAction).response.info.nextPage).toEqual(1);
   });
 
   it('should update store by adding current characters list, and return 1 for next page if next does not contain page', () => {
@@ -48,8 +48,8 @@ describe('Test Suite for Characters Store Reducer', () => {
       payload: mock,
     };
 
-    expect(charactersReducer(INITIAL_STATE, updateAction).results.length).toEqual(0);
-    expect(charactersReducer(INITIAL_STATE, updateAction).info.nextPage).toEqual(1);
+    expect(charactersReducer(INITIAL_STATE, updateAction).response.results.length).toEqual(0);
+    expect(charactersReducer(INITIAL_STATE, updateAction).response.info.nextPage).toEqual(1);
   });
 
   it('should update store by adding current characters list, and return 3 for next page', () => {
@@ -71,7 +71,7 @@ describe('Test Suite for Characters Store Reducer', () => {
       payload: mock,
     };
 
-    expect(charactersReducer(INITIAL_STATE, updateAction).results.length).toEqual(0);
-    expect(charactersReducer(INITIAL_STATE, updateAction).info.nextPage).toEqual(3);
+    expect(charactersReducer(INITIAL_STATE, updateAction).response.results.length).toEqual(0);
+    expect(charactersReducer(INITIAL_STATE, updateAction).response.info.nextPage).toEqual(3);
   });
 });

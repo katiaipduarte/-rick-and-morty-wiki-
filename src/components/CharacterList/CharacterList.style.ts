@@ -12,7 +12,7 @@ export const CharacterListContainer = styled.section`
     display: flex;
     height: 174px;
     justify-content: center;
-
+    cursor: pointer;
     img {
       align-items: center;
       display: flex;
@@ -31,21 +31,21 @@ export const CharacterListContainer = styled.section`
       .species,
       .status {
         color: #222;
-        font-size: 14rem;
+        font-size: 12rem;
         font-weight: bold;
         margin: 8rem 0;
         opacity: 0.7;
         text-transform: uppercase;
       }
 
-      h1 {
+      h4 {
         font-size: 16rem;
         font-weight: bold;
       }
 
       .description {
         color: #222;
-        font-size: 12rem;
+        font-size: 11rem;
         margin-top: 8rem;
 
         br {

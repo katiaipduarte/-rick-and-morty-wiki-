@@ -1,13 +1,16 @@
 import React, { memo, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Character } from '../../interfaces/character';
 import { Info } from '../../interfaces/info';
+import { modalStatus, selectCharacter } from '../../store/characters/action';
 import { GlobalState } from '../../store/store';
+import Modal from '../Modal/Modal';
 import Pagination from '../Pagination/Pagination';
 import { CharacterListContainer } from './CharacterList.style';
 
 const CharacterList = (): JSX.Element => {
-  const store = useSelector((state: GlobalState) => state.charactersState);
+  const store = useSelector((state: GlobalState) => state.charactersState).response;
+  const dispatch = useDispatch();
 
   const [list, setList] = useState<Character[]>([]);
   const [pagination, setPagination] = useState<Info>();
@@ -32,16 +35,21 @@ const CharacterList = (): JSX.Element => {
     return color;
   };
 
+  const handleClick = (id: number): void => {
+    dispatch(selectCharacter(id));
+    dispatch(modalStatus(true));
+  };
+
   return (
     <CharacterListContainer>
       {list.map((item: Character, i: number) => {
         return (
-          <article key={i}>
+          <article key={i} onClick={() => handleClick(item.id)}>
             <img src={item.image} alt={item.name} />
 
             <div>
               <p className="species">{item.species}</p>
-              <h1>{item.name}</h1>
+              <h4>{item.name}</h4>
               <p className="description">
                 <span style={{ color: getStatusColor(item.status) }} className="status">
                   {item.status}
@@ -55,7 +63,7 @@ const CharacterList = (): JSX.Element => {
           </article>
         );
       })}
-      {pagination !== undefined && <Pagination pagination={pagination} />}
+      {/* {pagination !== undefined && <Pagination pagination={pagination} />} */}
     </CharacterListContainer>
   );
 };

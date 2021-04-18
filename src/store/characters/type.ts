@@ -2,15 +2,27 @@ import { CharacterResponse } from '../../interfaces/character-response';
 
 export const CharactersType = {
   UPDATE: '@@CHARACTERS/UPDATE_DATA',
+  MODAL_STATUS: '@@CHARACTERS/MODAL_STATUS',
+  SELECTED: '@@CHARACTERS/SELECTED',
 };
 
-export const INITIAL_STATE: CharacterResponse = {
-  info: {
-    count: 0,
-    next: null,
-    pages: 0,
-    prev: null,
-    nextPage: 1,
+export interface CharacterStore {
+  response: CharacterResponse;
+  modalStatus: boolean;
+  selected: number;
+}
+
+export const INITIAL_STATE: CharacterStore = {
+  response: {
+    info: {
+      count: 0,
+      next: null,
+      pages: 0,
+      prev: null,
+      nextPage: 1,
+    },
+    results: [],
   },
-  results: [],
+  modalStatus: false,
+  selected: 0,
 };
